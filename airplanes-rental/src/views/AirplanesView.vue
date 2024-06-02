@@ -104,7 +104,6 @@ export default {
         });
         this.airplanes = this.airplanes.filter(airplane => airplane.id !== id);
       } catch (error) {
-        // Handle error here to make sure the interceptor catches it
         console.error(error);
       }
     },

@@ -8,6 +8,7 @@ import RentAirplaneView from '@/views/RentAirplaneView.vue';
 import AirplaneForm from '@/components/AirplaneForm.vue';
 import ReservationsView from '@/views/ReservationsView.vue';
 import ReservationHistoryView from '@/views/ReservationHistoryView.vue';
+import UsersManagementView from '@/views/UsersManagementView.vue';
 
 Vue.use(Router);
 
@@ -60,6 +61,11 @@ export default new Router({
       path: '/reservation_history',
       name: 'ReservationHistory',
       component: ReservationHistoryView
+    },
+    {
+      path: '/users',
+      name: 'UsersManagement',
+      component: UsersManagementView
     }
   ]
 });

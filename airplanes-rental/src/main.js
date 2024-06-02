@@ -44,7 +44,7 @@ axiosInstance.interceptors.response.use(
   },
   error => {
     if (error.response && error.response.status >= 300) {
-      Vue.prototype.$toast.error(error.response.data.message || 'An error occurred');
+      Vue.prototype.$toast.error(error.response.data || 'An error occurred');
     }
     return Promise.reject(error);
   }

@@ -6,10 +6,12 @@
       <b-navbar-nav>
         <b-nav-item v-if="isAuthenticated" to="/">Airplanes</b-nav-item>
         <b-nav-item v-if="isAdmin" to="/reservations">Reservations</b-nav-item>
+        <b-nav-item v-if="isAdmin" to="/users">User Management</b-nav-item>
         <b-nav-item v-if="isAuthenticated && !isAdmin" to="/reservation_history">My Reservations</b-nav-item>
         <b-nav-item v-if="!isAuthenticated" to="/login">Login</b-nav-item>
         <b-nav-item v-if="!isAuthenticated" to="/register">Register</b-nav-item>
         <b-nav-item v-if="isAuthenticated" @click="handleLogout">Logout</b-nav-item>
+        <b-nav-item v-if="isAuthenticated" disabled>Welcome, {{ username }}</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -20,7 +22,7 @@ import { mapGetters, mapActions } from 'vuex';
 
 export default {
   computed: {
-    ...mapGetters(['isAuthenticated', 'isAdmin'])
+    ...mapGetters(['isAuthenticated', 'isAdmin', 'username'])
   },
   methods: {
     ...mapActions(['logout']),

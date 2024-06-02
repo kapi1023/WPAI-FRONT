@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { axiosInstance } from '../main'; // Ensure correct import path
+import { axiosInstance } from '../main';
 
 Vue.use(Vuex);
 
