@@ -11,7 +11,7 @@
         <b-nav-item v-if="!isAuthenticated" to="/login">Login</b-nav-item>
         <b-nav-item v-if="!isAuthenticated" to="/register">Register</b-nav-item>
         <b-nav-item v-if="isAuthenticated" @click="handleLogout">Logout</b-nav-item>
-        <b-nav-item v-if="isAuthenticated" disabled>Welcome, {{ username }}</b-nav-item>
+        <b-nav-item v-if="isAuthenticated" >Welcome, {{ username }}</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
